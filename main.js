@@ -38,7 +38,7 @@ for (let i = 0; i < productos.length; i++) {
                 <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
                 <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
                 <p class="font-normal text-gray-700 dark:text-gray-400">Categoria: ${productos[i].categoria}</p>
-                <p class="font-normal text-gray-700 dark:text-gray-400">Precio: ${productos[i].precio} $</p>
+                <p class="font-normal text-gray-700 dark:text-gray-400">Precio: $ ${productos[i].precio}</p>
             </a>
             `;
   }
