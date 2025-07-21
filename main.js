@@ -24,6 +24,7 @@ const productos = [
   { nombre: "Cinta métrica", categoria: "Ferretería", precio: 25 },
 ];
 
+
 //  Categoría fija
 const categoria = "Tecnología";
 
@@ -48,4 +49,12 @@ for (let i = 0; i < productos.length; i++) {
     // Insertamos usando innerHTML
     contenedor.innerHTML += htmlProducto;
   }
+
+for (let i  = 0; i < productos.length; i++) {
+  const element= productos[i];
+  if(element.categoria==="Ropa"){//si cambia la categoria a va a imprimir esa categoria especifica
+    console.log(productos[i])
+  }
+  
+
 }
