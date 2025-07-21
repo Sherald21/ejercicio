@@ -23,26 +23,10 @@ const productos = [
   { nombre: "Destornillador", categoria: "Ferretería", precio: 30 },
   { nombre: "Cinta métrica", categoria: "Ferretería", precio: 25 },
 ];
-
-let tabla = document.querySelector("#contenedor-productos");
-tabla.innerHTML = "";
-for (let i = 0; i < productos.length; i++) {
-  tabla.innerHTML += `<tr
-            class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700 border-gray-200"
-          >
-            <th class="p-2">
-             <img src="${productos[i].img}" alt="" class="rounded-2xl h-36 w-64">
-            </th>
-            <th
-              scope="row"
-              class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-            >
-              ${productos[i].nombre}
-            </th>
-            <td class="px-6 py-4">${productos[i].precio}</td>
-            <td class="px-6 py-4">${productos[i].stock}</td>
-            <td class="px-6 py-4">
-              <button class="bg-green-700 text-white p-2 rounded-2xl m-4">Comprar</button>
-            </td>
-          </tr>`;
+for (let i  = 0; i < productos.length; i++) {
+  const element= productos[i];
+  if(element.categoria==="Ropa"){//si cambia la categoria a va a imprimir esa categoria especifica
+    console.log(productos[i])
+  }
+  
 }
