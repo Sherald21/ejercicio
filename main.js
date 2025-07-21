@@ -23,3 +23,29 @@ const productos = [
   { nombre: "Destornillador", categoria: "Ferretería", precio: 30 },
   { nombre: "Cinta métrica", categoria: "Ferretería", precio: 25 },
 ];
+
+//  Categoría fija
+const categoria = "Tecnología";
+
+// Seleccionamos el contenedor usando querySelector
+const contenedor = document.querySelector("#contenedor-productos");
+
+// Usamos un bucle for para recorrer y filtrar
+for (let i = 0; i < productos.length; i++) {
+  if (productos[i].categoria === categoria) {
+    const producto = productos[i];
+
+    // Creamos el HTML para un producto
+    const htmlProducto = `
+      <div class="producto">
+        <img src="https://via.placeholder.com/220x150?text=${encodeURIComponent(producto.nombre)}" alt="${producto.nombre}">
+        <h3>${producto.nombre}</h3>
+        <p>Categoría: ${producto.categoria}</p>
+        <p>Precio: $${producto.precio}</p>
+      </div>
+    `;
+
+    // Insertamos usando innerHTML
+    contenedor.innerHTML += htmlProducto;
+  }
+}
