@@ -23,3 +23,10 @@ const productos = [
   { nombre: "Destornillador", categoria: "Ferretería", precio: 30 },
   { nombre: "Cinta métrica", categoria: "Ferretería", precio: 25 },
 ];
+for (let i  = 0; i < productos.length; i++) {
+  const element= productos[i];
+  if(element.categoria==="Ropa"){//si cambia la categoria a va a imprimir esa categoria especifica
+    console.log(productos[i])
+  }
+  
+}
